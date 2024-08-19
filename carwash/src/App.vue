@@ -1,55 +1,29 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+  <main id="app">
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+<navigation-bar></navigation-bar>
+<Footer></Footer>
+<router-view></router-view>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+</main>
 </template>
 
 <script>
+import NavigationBar from './components/NavigationBar.vue';
+import Footer from './components/Footer.vue';
+
 
 export default {
   name: 'App',
-
-  data: () => ({
-    //
-  }),
-};
+  components: {
+    NavigationBar, Footer
+  }
+}
 </script>
+
+<style scoped>
+#app {
+  background: linear-gradient(to right, rgb(13, 27, 87), rgb(22, 120, 185));
+}
+
+</style>
