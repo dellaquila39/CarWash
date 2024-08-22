@@ -1,7 +1,6 @@
-<template>
-    <v-container class="container">
-        <v-footer color="black" class="white--text">
-            <v-col class="text-center py-4">
+    <template>
+        <v-footer color="black" class="white--text" app>
+            <v-col class="text-center py-4" cols="12">
                 <v-row>
                     <v-col cols="12">
                     <h2 class="mb-4">Agustín, Front-End Developer</h2>
@@ -35,9 +34,7 @@
                 </v-col>
             </v-row>
         </v-col>
-
-        </v-footer>
-    </v-container>
+    </v-footer>
 </template>
 
 <script>
@@ -47,10 +44,6 @@ export default{
 </script>
 
 <style scoped>
-.container {
-    width: 100%;
-}
-
 .v-footer {
     background-color: black;
     font-family: "Roboto", sans-serif;
