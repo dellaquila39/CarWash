@@ -4,13 +4,13 @@
       <navigation-bar></navigation-bar>
     </v-app-bar>
 
-    <v-maim>
+    <v-main>
       <Start></Start>
-    </v-maim>
+    </v-main>
     
-    <v-footer>
+    <!-- <v-footer>
       <Footer></Footer>
-    </v-footer>
+    </v-footer> -->
 
 <router-view></router-view>
 </main>
@@ -18,14 +18,14 @@
 
 <script>
 import NavigationBar from './components/NavigationBar.vue';
-import Footer from './components/Footer.vue';
+// import Footer from './components/Footer.vue';
 import Start from './views/Start.vue';
 
 
 export default {
   name: 'App',
   components: {
-    NavigationBar, Footer, Start
+    NavigationBar, Start
   }
 }
 </script>

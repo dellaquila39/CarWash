@@ -1,5 +1,5 @@
-    <template>
-        <v-footer color="black" class="white--text" app>
+    <!-- <template>
+        <v-footer color="black" class="white--text footer-hidden" app>
             <v-col class="text-center py-4" cols="12">
                 <v-row>
                     <v-col cols="12">
@@ -39,7 +39,25 @@
 
 <script>
 export default{
-    name: 'Footer'
+    name: 'Footer',
+    mounted() {
+        window.addEventListener('scroll', this.showFooter);
+    },
+    methods: {
+        showFooter() {
+        const footer = document.querySelector('.footer-hidden');
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const footerTop = footer.offsetTop;
+        const scrollingDown = scrollPosition > this.lastScrollPosition;
+
+        if (scrollingDown && scrollPosition >= footerTop) {
+            footer.classList.remove('footer-hidden');
+        } else if (!scrollingDown && scrollPosition < footerTop) {
+            footer.classList.add('footer-hidden');
+        }
+        this.lastScrollPosition = scrollPosition;
+        }
+    }
 }
 </script>
 
@@ -61,4 +79,8 @@ export default{
     border: 20px  #314c7d;
     border-radius: 50%;
 }
-</style>
+
+.footer-hidden {
+    display: none;
+}
+</style> -->

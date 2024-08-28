@@ -10,6 +10,7 @@
                 </v-row>
             </v-carousel-item>
         </v-carousel>
+        <DescriptionLetters></DescriptionLetters>
     </v-app>
 </template>
 
@@ -18,8 +19,12 @@ import img1 from '../assets/img1.jpg'
 import img2 from '../assets/img2.jpg'
 import img3 from '../assets/img3.jpg'
 import img4 from '../assets/img4.jpg'
+import DescriptionLetters from '../components/DescriptionLetters.vue'
 
 export default{
+    components: {
+        DescriptionLetters,
+    },
     name: 'Stars',
     data() {
         return {
@@ -44,14 +49,20 @@ export default{
                     title:'',
                     description:'',
                 },
-            ]
+            ],
         }
-    }
+    },
+
 }
+
 
 </script>
 
 <style scoped>
+.app {
+    min-height: 100vh;
+}
+
 .v-carousel {
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
@@ -65,4 +76,7 @@ export default{
     max-width: 2500px;
     margin: 0 auto;
 }
+
+
+
 </style>
