@@ -79,7 +79,7 @@ export default {
 .description-container {
     position: absolute;
     bottom: 0;
-    left: 51%;
+    left: 50%;
     transform: translateX(-50%) translateY(-250px);
     width: calc(100% - 20px);
     height: 0%; /* Ajusta esto según lo alto que quieras que sea la descripción */
