@@ -64,4 +64,5 @@ export default{
     -webkit-transition: all 1s;
     transition: all 1s;
 }
+
 </style>
