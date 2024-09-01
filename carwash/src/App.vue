@@ -5,14 +5,15 @@
     </v-app-bar>
 
     <v-main>
-      <Start></Start>
-    </v-main>
-    
-    <!-- <v-footer>
+      <Start v-if="$route.path === '/'"></Start>
+
+      <!-- <v-footer>
       <Footer></Footer>
     </v-footer> -->
 
-<router-view></router-view>
+    <router-view v-else></router-view>
+</v-main>
+
 </main>
 </template>
 

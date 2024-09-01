@@ -29,7 +29,7 @@ export default {
     name: 'NavigationBar',
     methods: {
         goToStart() {
-            this.$router.push('/Start');
+            this.$router.push('/');
         },
         goToShifts() {
             this.$router.push('/Shifts');
